@@ -12,6 +12,7 @@ import Constants from 'expo-constants';
 import Styles from '../constants/Styles';
 import Colors from '../constants/Colors';
 import Screen from '../components/Screen';
+import Favorite from '../components/Favorite';
 import GoogleBooksAPI from '../services/GoogleBooksAPI';
 import CustomButton from '../components/CustomButton';
 
@@ -92,16 +93,23 @@ export default class Book extends React.Component {
       <View style={{ height: Constants.statusBarHeight }} />
       <ScrollView contentContainerStyle={[Styles.padding20]}>
         <Text style={[Styles.text22, Styles.textBold, Styles.textPrimary]}>{book.volumeInfo.title}</Text>
-        {book.volumeInfo.subtitle && <View>
-          <View style={Styles.viewDivider5} />
-          <Text style={[Styles.text16, Styles.textBold, Styles.textLightText]}>{book.volumeInfo.subtitle}</Text>
-        </View>}
-        {Array.isArray(book.volumeInfo.authors) && book.volumeInfo.authors.length > 0 && <View>
-          <View style={Styles.viewDivider5} />
-          <Text style={[Styles.text16, Styles.textBold, Styles.textLightText]}>Autor{book.volumeInfo.authors.length > 1 ? 'es' : ''}: {book.volumeInfo.authors.join(', ')}</Text>
-        </View>}
+        <View style={[Styles.inline, Styles.spaceBetween]}>
+          <View style={{ width: width-20-100 }}>
+            {book.volumeInfo.subtitle && <View>
+              <View style={Styles.viewDivider5} />
+              <Text style={[Styles.text16, Styles.textBold, Styles.textLightText]}>{book.volumeInfo.subtitle}</Text>
+            </View>}
+            {Array.isArray(book.volumeInfo.authors) && book.volumeInfo.authors.length > 0 && <View>
+              <View style={Styles.viewDivider5} />
+              <Text style={[Styles.text16, Styles.textBold, Styles.textLightText]}>Autor{book.volumeInfo.authors.length > 1 ? 'es' : ''}: {book.volumeInfo.authors.join(', ')}</Text>
+            </View>}
+          </View>
+          <View>
+            <Favorite id={this.id} />
+          </View>
+        </View>
         <View style={Styles.viewDivider} />
-        <Text style={[Styles.text15, Styles.textLightText]}>{book.volumeInfo.description.replace(/<br>/g, '\n')}</Text>
+        {book.volumeInfo.description && <Text style={[Styles.text15, Styles.textLightText]}>{book.volumeInfo.description.replace(/<br>/g, '\n')}</Text>}
         <View style={Styles.viewDivider15} />
         <Text style={[Styles.text18, Styles.textBold]}>Mais detalhes</Text>
         <View style={Styles.viewDivider} />
