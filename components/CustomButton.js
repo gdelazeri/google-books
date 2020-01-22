@@ -29,7 +29,7 @@ export default class CustomButton extends React.Component {
       ...this.props.containerViewStyle,
     };
     return <Button
-      loadingProps={{ color: this.props.textStyle.color || Colors.defaultText }}
+      loadingProps={{ color: this.props.textStyle.color || Colors.lightText }}
       loading={this.props.loading}
       icon={this.props.icon}
       onPress={this.props.onPress}

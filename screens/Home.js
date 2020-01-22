@@ -135,7 +135,7 @@ export default class Home extends React.Component {
           onClear={() => this.updateSearch('')}
           cancelButtonTitle='Cancelar'
           cancelButtonProps={{ buttonTextStyle: { fontSize: 16 } }}
-          inputStyle={{ fontSize: 16, color: Colors.defaultText }}
+          inputStyle={{ fontSize: 16, color: Colors.lightText }}
         />
         <FlatList
           keyboardShouldPersistTaps='handled'
