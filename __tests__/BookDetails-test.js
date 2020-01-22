@@ -2,17 +2,18 @@ import React from 'react';
 import NavigationTestUtils from 'react-navigation/NavigationTestUtils';
 import renderer from 'react-test-renderer';
 
-import App from '../App';
+import BookDetails from '../components/BookDetails';
+import bookSample from '../constants/bookSample';
 
-describe('Home', () => {
+describe('BookDetails', () => {
   jest.useFakeTimers();
 
   beforeEach(() => {
     NavigationTestUtils.resetInternalState();
   });
 
-  it(`renders the App screen`, () => {
-    const tree = renderer.create(<App />).toJSON();
+  it(`renders the BookDetails component`, () => {
+    const tree = renderer.create(<BookDetails book={bookSample} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -2,17 +2,17 @@ import React from 'react';
 import NavigationTestUtils from 'react-navigation/NavigationTestUtils';
 import renderer from 'react-test-renderer';
 
-import App from '../App';
+import Favorite from '../components/Favorite';
 
-describe('Home', () => {
+describe('Favorite', () => {
   jest.useFakeTimers();
 
   beforeEach(() => {
     NavigationTestUtils.resetInternalState();
   });
 
-  it(`renders the App screen`, () => {
-    const tree = renderer.create(<App />).toJSON();
+  it(`renders the Favorite component`, () => {
+    const tree = renderer.create(<Favorite id={'3465f65465f'} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

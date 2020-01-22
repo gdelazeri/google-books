@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookDetails renders the BookDetails component 1`] = `
+<View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#707d8a",
+          "fontFamily": "open-sans",
+          "fontSize": 18,
+        },
+        Object {
+          "color": "#707d8a",
+          "fontFamily": "open-sans-bold",
+        },
+      ]
+    }
+  >
+    Mais detalhes
+  </Text>
+  <View
+    style={
+      Object {
+        "height": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://books.google.com/books/content?id=aMT3cHZPwUcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+        }
+      }
+      style={
+        Object {
+          "height": 337.5,
+          "width": 225,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "width": 15,
+        }
+      }
+    />
+    <View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#707d8a",
+              "fontFamily": "open-sans",
+              "fontSize": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#707d8a",
+                "fontFamily": "open-sans-bold",
+              }
+            }
+          >
+            Preço: 
+          </Text>
+          24,66
+           
+          BRL
+        </Text>
+        <View
+          style={
+            Object {
+              "height": 5,
+            }
+          }
+        />
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#707d8a",
+              "fontFamily": "open-sans",
+              "fontSize": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#707d8a",
+                "fontFamily": "open-sans-bold",
+              }
+            }
+          >
+            Páginas: 
+          </Text>
+          224
+        </Text>
+        <View
+          style={
+            Object {
+              "height": 5,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#707d8a",
+              "fontFamily": "open-sans",
+              "fontSize": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#707d8a",
+                "fontFamily": "open-sans-bold",
+              }
+            }
+          >
+            Avaliação: 
+          </Text>
+          4,50
+        </Text>
+        <View
+          style={
+            Object {
+              "width": 2,
+            }
+          }
+        />
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              }
+            }
+            theme={
+              Object {
+                "colors": Object {
+                  "disabled": "hsl(208, 8%, 90%)",
+                  "divider": "#bcbbc1",
+                  "error": "#ff190c",
+                  "grey0": "#393e42",
+                  "grey1": "#43484d",
+                  "grey2": "#5e6977",
+                  "grey3": "#86939e",
+                  "grey4": "#bdc6cf",
+                  "grey5": "#e1e8ee",
+                  "greyOutline": "#bbb",
+                  "platform": Object {
+                    "android": Object {
+                      "error": "#f44336",
+                      "primary": "#2196f3",
+                      "secondary": "#9C27B0",
+                      "success": "#4caf50",
+                      "warning": "#ffeb3b",
+                    },
+                    "ios": Object {
+                      "error": "#ff3b30",
+                      "primary": "#007aff",
+                      "secondary": "#5856d6",
+                      "success": "#4cd964",
+                      "warning": "#ffcc00",
+                    },
+                  },
+                  "primary": "#2089dc",
+                  "searchBg": "#303337",
+                  "secondary": "#8F0CE8",
+                  "success": "#52c41a",
+                  "warning": "#faad14",
+                },
+              }
+            }
+            underlayColor="white"
+          >
+            <Text />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "height": 5,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            Object {
+              "width": 397.50000000000006,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 15,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "borderRadius": 5,
+              "height": 40,
+              "marginLeft": 0,
+              "marginRight": 0,
+              "width": 300,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "borderColor": "#1a73e8",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "height": 40,
+                  "justifyContent": "center",
+                  "padding": 8,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#1a73e8",
+                    "fontFamily": "open-sans-bold",
+                    "fontSize": 16,
+                    "paddingBottom": 1,
+                    "paddingTop": 2,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                COMPRAR
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

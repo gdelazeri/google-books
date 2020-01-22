@@ -8,6 +8,7 @@ import {
   Image,
   Dimensions,
   ActivityIndicator,
+  Platform,
 } from 'react-native';
 import Constants from 'expo-constants';
 import { SearchBar, ListItem, Icon } from 'react-native-elements';

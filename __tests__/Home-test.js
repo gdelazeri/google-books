@@ -2,7 +2,7 @@ import React from 'react';
 import NavigationTestUtils from 'react-navigation/NavigationTestUtils';
 import renderer from 'react-test-renderer';
 
-import App from '../App';
+import Home from '../screens/Home';
 
 describe('Home', () => {
   jest.useFakeTimers();
@@ -11,8 +11,8 @@ describe('Home', () => {
     NavigationTestUtils.resetInternalState();
   });
 
-  it(`renders the App screen`, () => {
-    const tree = renderer.create(<App />).toJSON();
+  it(`renders the Home screen`, () => {
+    const tree = renderer.create(<Home />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
