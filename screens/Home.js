@@ -48,14 +48,6 @@ export default class Home extends React.Component {
     this.load();
   }
 
-  async load() {
-    try {
-      this.setState({ loadError: false, loading: false });
-    } catch (error) {
-      this.setState({ loadError: true, loading: false });
-    }
-  }
-
   async updateSearch(search) {
     clearTimeout(this.timer);
     this.setState({ search });
