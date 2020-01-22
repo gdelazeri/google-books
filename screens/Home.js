@@ -29,7 +29,7 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
       loadError: false,
       searching: false,
       search: '',
@@ -44,27 +44,22 @@ export default class Home extends React.Component {
     header: null,
   }
 
-  async componentDidMount() {
-    this.load();
-  }
-
   async updateSearch(search) {
     clearTimeout(this.timer);
-    this.setState({ search });
+    this.setState({ search, searching: true });
     if (search.length > 0) {
       // Timeout para aguardar usuário parar de digitar
       this.timer = setTimeout(async () => {
         try {
-          this.setState({ searching: true });
           const books = await GoogleBooksAPI.listBooks(search, 0, MAX_RESULTS);
           this.setState({ books: books.items, qtyPages: parseInt(books.totalItems/MAX_RESULTS, 10), page: 0, searching: false });
           Keyboard.dismiss();
         } catch (e) {
-          this.setState({ books: [] });
+          this.setState({ books: [], searching: false });
         }
       }, WAIT_INTERVAL);
     } else {
-      this.setState({ books: [] });
+      this.setState({ books: [], searching: false });
     }
   }
 
