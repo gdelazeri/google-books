@@ -2,12 +2,14 @@ import React from 'react';
 import {
   Text,
   View,
+  Keyboard,
 } from 'react-native';
 import Constants from 'expo-constants';
 import { SearchBar } from 'react-native-elements';
 import Styles from '../constants/Styles';
 import Colors from '../constants/Colors';
 import Screen from '../components/Screen';
+import GoogleBooksAPI from '../services/GoogleBooksAPI';
 
 // Tempo de espera para buscar os livros
 const WAIT_INTERVAL = 600;
@@ -45,8 +47,9 @@ export default class Home extends React.Component {
     clearTimeout(this.timer);
     this.setState({ search });
     if (search.length > 0) {
+      // Timeout para aguardar usuário parar de digitar
       this.timer = setTimeout(async () => {
-        // const books = await GoogleBooksAPI.listBooks();
+        const books = await GoogleBooksAPI.listBooks(search);
         this.setState({ books, filtering: false });
         Keyboard.dismiss();
       }, WAIT_INTERVAL);
