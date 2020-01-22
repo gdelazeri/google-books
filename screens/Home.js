@@ -27,6 +27,7 @@ export default class Home extends React.Component {
     this.state = {
       loading: true,
       loadError: false,
+      search: '',
       books: [],
     }
   }
@@ -93,7 +94,7 @@ export default class Home extends React.Component {
   render() {
     return <Screen loading={this.state.loading} navigation={this.props.navigation} error={this.state.loadError} reload={() => this.reload()}>
       <View style={{ height: Constants.statusBarHeight }} />
-      <Text style={[Styles.padding20, Styles.text24, Styles.textBold]}>Google Books</Text>
+      <Text style={[Styles.padding20, Styles.paddingB15, Styles.text24, Styles.textBold, Styles.textPrimary]}>Google Books</Text>
       <View style={{ flex: 1 }}>
         <SearchBar
           platform={Platform.OS}
@@ -122,7 +123,7 @@ export default class Home extends React.Component {
           renderItem={({ item }) => this.renderItem(item)}
           ListEmptyComponent={() => <View>
             <View style={Styles.viewDivider} />
-            <Text style={Styles.textEmpty}>Nenhum livro encontrado</Text>
+            {this.state.search.length > 0 && <Text style={Styles.textEmpty}>Nenhum livro encontrado</Text>}
             <View style={Styles.viewDivider} />
           </View>}
           ItemSeparatorComponent={() => <View style={Styles.viewDividerLine} />}
