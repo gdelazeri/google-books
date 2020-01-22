@@ -1,8 +1,8 @@
 const endpoint = 'https://www.googleapis.com/books/v1/volumes';
 
 export default class GoogleBooksAPI {
-  static async listBooks(search) {
-    const path = `?q=${search.replace(/ /g, '+')}`;
+  static async listBooks(search, page, maxResults) {
+    const path = `?q=${search.replace(/ /g, '+')}&startIndex=${page*maxResults}&maxResults=${maxResults}`;
     const resp = await GoogleBooksAPI.request(path);
     return resp;
   }
