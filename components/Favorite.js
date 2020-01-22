@@ -48,7 +48,7 @@ export default class Favorite extends React.Component {
   render() {
     const { favorite } = this.state;
     return <TouchableOpacity onPress={() => this.press()}>
-      <Icon type='material-community' name={favorite ? 'heart' : 'heart-outline'} size={40} color={favorite ? Colors.red : Colors.lightText} />
+      <Icon type='material-community' name={favorite ? 'heart' : 'heart-outline'} size={35} color={favorite ? Colors.red : Colors.lightText} />
     </TouchableOpacity>
   }
 }
