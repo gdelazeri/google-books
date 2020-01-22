@@ -130,13 +130,14 @@ export default class Book extends React.Component {
             {book.volumeInfo.averageRating !== undefined && <View style={Styles.inline}>
               <Text style={Styles.text16}>
                 <Text style={Styles.textBold}>Avaliação: </Text>
-                {book.volumeInfo.averageRating.toString().replace('.',',')}
+                {book.volumeInfo.averageRating.toFixed(2).replace('.',',')}
               </Text>
-              <Icon type='material-community' name='star' size={15} color={Colors.lightText} />
+              <View style={{ width: 2 }} />
+              <Icon type='material-community' name='star' size={20} color={Colors.lightText} />
               <View style={Styles.viewDivider5} />
             </View>}
             {book.saleInfo.buyLink && <View style={[Styles.center, { width: (width*0.55)-15 }]}>
-              <View style={Styles.viewDivider5} />
+              <View style={Styles.viewDivider15} />
               <CustomButton
                 width={width*0.4}
                 buttonStyle={Styles.btnBorderPrimary}
